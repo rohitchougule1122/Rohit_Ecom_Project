@@ -34,7 +34,7 @@ public class CreateNewAccountTest extends BaseClass {
 	@AfterMethod
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 	/*
 	@Test
@@ -50,14 +50,11 @@ public class CreateNewAccountTest extends BaseClass {
 		//String firstname =  (String)logindata.get("fname");
 		//String lastname  =  (String)logindata.get("lname");
 		//String password1  =  (String)logindata.get("password");
-		//System.out.println((String)logindata.get("username"));
+
 		
 		Sheet sh1 = testData.getSheet(testData.getEcxcelFile(), "signup") ;
 		
-		System.out.println(sh1.getLastRowNum());
-		System.out.println(sh1.getRow(1).getCell(1).getStringCellValue());
-		System.out.println(sh1.getRow(1).getCell(2).getStringCellValue());
-		System.out.println(sh1.getRow(1).getLastCellNum());
+	
 		//Map<String, Object> logindata1 = testData.getExcel1SheetData(sh1);
 		
 	    //createAccountPom.personalInformation(sh1.getRow(1).getCell(2).getStringCellValue());
@@ -68,16 +65,19 @@ public class CreateNewAccountTest extends BaseClass {
 		
 	}*/
 	@Test
-	public void personalInformation() throws FileNotFoundException
+	public void validatePI() throws FileNotFoundException, InterruptedException
 	{
 		indexPagePom = new IndexPagePom();
 		signInPagePOM = indexPagePom.clickOnSignIn();
 		createAccountPom = signInPagePOM.createEmail("rohit@1122.com");
+		Thread.sleep(15000);
+		//createAccountPom.firstName.sendKeys("rohit");
+		//createAccountPom.click();
+		testData.personalInformation();
+		Thread.sleep(10000);
 		
-		Sheet sh1 = testData.getSheet(testData.getEcxcelFile(), "login") ;
-		Map<String, Object> logindata1 = testData.getExcel1SheetData(sh1);
-		
-		//createAccountPom.personalInformation((String)logindata1.get("fname"), (String)logindata1.get("lname"), (String)logindata1.get("password"));
-	}
 
+	
+		
+	}
 }

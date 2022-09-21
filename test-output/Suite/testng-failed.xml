@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="chrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.Myecom.testcases.IndexPageTest">
+        <methods>
+          <include name="validateTitle"/>
+          <include name="generateExtentReport"/>
+          <include name="flushReport"/>
+          <include name="setUp"/>
+          <include name="readProp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.Myecom.testcases.IndexPageTest -->
+    </classes>
+  </test> <!-- chrome(failed) -->
+  <test thread-count="5" name="firefox(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.Myecom.testcases.IndexPageTest">
+        <methods>
+          <include name="validateclickOnSignIn"/>
+          <include name="validateTitle"/>
+          <include name="generateExtentReport"/>
+          <include name="flushReport"/>
+          <include name="setUp"/>
+          <include name="readProp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.Myecom.testcases.IndexPageTest -->
+    </classes>
+  </test> <!-- firefox(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -5,9 +5,9 @@
     <classes>
       <class name="com.Myecom.testcases.CreateNewAccountTest">
         <methods>
-          <include name="personalInformation"/>
           <include name="readProp"/>
           <include name="setUp"/>
+          <include name="validatePI"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.Myecom.testcases.CreateNewAccountTest -->

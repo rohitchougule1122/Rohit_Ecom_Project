@@ -7,6 +7,9 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.poi.ss.usermodel.Sheet;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -40,7 +43,7 @@ public class SigninPageTest extends BaseClass {
 		driver.quit();
 	}
 	
-	@Test
+	/*@Test
 	public void login() throws FileNotFoundException, InterruptedException
 	{
 		Sheet sh = testData.getSheet(testData.getEcxcelFile(), "login") ;
@@ -60,16 +63,16 @@ public class SigninPageTest extends BaseClass {
 		signInPagePOM = indexPagePom.clickOnSignIn();
 		signInPagePOM.createEmail((String)logindata.get("username"));
 		Thread.sleep(20000);
-	}
+	}*/
 	@Test
 	public void validateSubmit() throws InterruptedException
 	{
 		indexPagePom = new IndexPagePom();
 		signInPagePOM = indexPagePom.clickOnSignIn();
 		createAccountPom = signInPagePOM.createEmail("rohit@123.com");
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.MINUTES);
-	
+		Thread.sleep(10000);
 		String heading = createAccountPom.validateSubmitButton();
+		System.out.println(heading);
 		Assert.assertEquals(heading, "CREATE AN ACCOUNT");
 	}
 }
