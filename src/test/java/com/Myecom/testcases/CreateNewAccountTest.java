@@ -22,7 +22,7 @@ public class CreateNewAccountTest extends BaseClass {
 	SignInPagePOM signInPagePOM;
 	IndexPagePom indexPagePom;
 	CreateAccountPom createAccountPom;
-	SigninPageTest signinPageTest = new SigninPageTest();
+	
 	
 	
 	@BeforeMethod
@@ -73,7 +73,7 @@ public class CreateNewAccountTest extends BaseClass {
 		Thread.sleep(15000);
 		//createAccountPom.firstName.sendKeys("rohit");
 		//createAccountPom.click();
-		testData.personalInformation();
+		 testData.personalInformation();
 		Thread.sleep(10000);
 		
 

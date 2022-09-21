@@ -69,7 +69,7 @@ public class ExcelSheetHandle extends BaseClass {
 		
 		}
 
-	public void personalInformation() throws FileNotFoundException
+	public  void personalInformation() throws FileNotFoundException
 	{
 		 
 		Sheet sh1 = getSheet(getEcxcelFile(), "Sheet1");
@@ -79,6 +79,8 @@ public class ExcelSheetHandle extends BaseClass {
 		
 		String fn = (String) logindata1.get("fname");
 		createAccountPom.firstName.sendKeys(fn);
+		
+
 		
 		/*String text s= (String)logindata1.get("title");
 		if(text.equalsIgnoreCase("Mr"))

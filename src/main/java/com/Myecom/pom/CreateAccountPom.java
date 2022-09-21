@@ -59,9 +59,6 @@ public class CreateAccountPom extends  BaseClass {
 		String heading = pageHeading.getText();
 		return heading;
 	}
-	public void click()
-	{
-		title1.click();
-	}
+
 	
 }
