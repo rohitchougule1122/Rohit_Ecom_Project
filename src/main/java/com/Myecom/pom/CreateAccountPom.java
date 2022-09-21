@@ -59,6 +59,19 @@ public class CreateAccountPom extends  BaseClass {
 		String heading = pageHeading.getText();
 		return heading;
 	}
+	public void personalinfo(String email,String fname,String lname,String password1,String address,String city1,
+			String state1,String zipcode,String mobile1)
+	{
+		
+		firstName.sendKeys(fname);
+		lastName.sendKeys(lname);
+		password.sendKeys(password1);
+		address1.sendKeys(address);
+		city.sendKeys(city1);
+		state.sendKeys(state1);
+		zip.sendKeys(zipcode);
+		//mobile.sendKeys(mobile1);
+	}
 
 	
 }
