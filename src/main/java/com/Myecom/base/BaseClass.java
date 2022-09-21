@@ -19,9 +19,15 @@ public class BaseClass {
 	
 	public void loadAppication() {
 		
+<<<<<<< HEAD
 		String browser = (String) prop.get("browser");
 			
 		if(browser.equalsIgnoreCase("chrome")) {
+=======
+		String browser = (String) prop.get("browser"); //Changed in base
+		
+		if(browser.equalsIgnoreCase("chrome")) { //changed Base 
+>>>>>>> 3431bbd0b2bccc7821da116d142ee0c32cf12666
 			System.setProperty("webdriver.chrome.driver", projectPath+"//drivers//chromedriver.exe");
 			driver = new ChromeDriver();
 		}
